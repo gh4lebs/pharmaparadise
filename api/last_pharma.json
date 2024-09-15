@@ -1,0 +1,2284 @@
+{
+	"info": {
+		"_postman_id": "5dc93487-203a-4286-8423-c4ed440fdac2",
+		"name": "Pharma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28006888",
+		"_collection_link": "https://www.postman.com/lunar-robot-854247/workspace/pharmatesting/collection/28006888-5dc93487-203a-4286-8423-c4ed440fdac2?action=share&source=collection_link&creator=28006888"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "2",
+									"description": "required, 1 as Admin, 2 as Pharmacist, 3 as Shufir",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "صيدلي",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "wael.hamza.2002@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "11111111",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "0988777665",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef09685-b8d2-4440-8459-b3e4cb6789b3"
+								},
+								{
+									"key": "location[0][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "location[0][area]",
+									"value": "Test area",
+									"type": "text"
+								},
+								{
+									"key": "location[0][street]",
+									"value": "Test street",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "email-verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "wael.hamza.2002@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "9091",
+									"description": "verification code",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/email-verification",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"email-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend-email-verification-code",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/resend-email-verification-code/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"resend-email-verification-code",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "credential",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								},
+								{
+									"key": "remember_token",
+									"value": "1",
+									"description": "boolean",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "credential",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "remember_me",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/forget-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/reset-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/user-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"user-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "location[0][city_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "location[0][area]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "location[0][street]",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/update/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pharmacists-accounts-counts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pharmacists-accounts/counts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pharmacists-accounts",
+								"counts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pharmacists-accounts-all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"description": "قيم الفلاتر يجب ان تكون 0,1",
+									"type": "text"
+								},
+								{
+									"key": "in_review",
+									"value": "",
+									"description": "فلتر الصيادلة القيد المراجعة",
+									"type": "text"
+								},
+								{
+									"key": "accepted",
+									"value": "1",
+									"description": "فلتر الصيادلة المقبولين",
+									"type": "text"
+								},
+								{
+									"key": "rejected",
+									"value": "",
+									"description": "فلتر الصيادلة المرفوضين",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pharmacists-accounts/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pharmacists-accounts",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pharmacists-accounts-accept-account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pharmacists-accounts/accept-account/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pharmacists-accounts",
+								"accept-account",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pharmacists-accounts-reject-account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pharmacists-accounts/reject-account/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pharmacists-accounts",
+								"reject-account",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cities/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cities",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "homs",
+									"type": "text"
+								},
+								{
+									"key": "expected_delivery_time",
+									"value": "20min",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/cities/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cities",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cities/show/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cities",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "hamah",
+									"type": "text"
+								},
+								{
+									"key": "expected_delivery_time",
+									"value": "30",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/cities/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cities",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Distribution Times",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/distribution-schedule/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"distribution-schedule",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "process",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "day_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cities_ids[0]",
+									"value": "1",
+									"description": "array of cities ids like [1, 2, 3, etc...]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/distribution-schedule/process",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"distribution-schedule",
+								"process"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Labs",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/labs/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "alhetham",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eec5034-cc13-4bd0-b940-efa9a321e212"
+								},
+								{
+									"key": "mobile",
+									"value": "0935280318",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/labs/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"store"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "test",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/labs/show/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "asaeed",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eec5034-cc13-4bd0-b940-efa9a321e212"
+								},
+								{
+									"key": "mobile",
+									"value": "0935280318",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/labs/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/labs/archive/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"archive",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view-archived",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/labs/view-archived",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"view-archived"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/labs/restore/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"restore",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/labs/delete/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"labs",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "barcode",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "lab",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "product1",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20000",
+									"type": "text"
+								},
+								{
+									"key": "dose",
+									"value": "100mg",
+									"type": "text"
+								},
+								{
+									"key": "pills",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "barcode",
+									"value": "23456782",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef187b7-2bfc-4830-9892-aa6dfb99ef4b"
+								},
+								{
+									"key": "lab_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "max_quantity",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/show/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "editProd1",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "dose",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "pills",
+									"value": "567",
+									"type": "text"
+								},
+								{
+									"key": "barcode",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eec2b83-4617-4fc0-9eac-a387f7b9e84a"
+								},
+								{
+									"key": "lab_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "max_quantity",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/archive/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"archive",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view-archived",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/view-archived",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"view-archived"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/restore/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"restore",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "import",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "products",
+									"type": "file",
+									"src": "/C:/Users/TECHNO-GATE/Desktop/New Microsoft Excel Worksheet.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products/import/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"import",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total-product-quantity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/total-product-quantity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"total-product-quantity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Offers",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "lab",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/offers/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"offers",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Offer One",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1:package, 2:product",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "it's details",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "25000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef179a5-82db-4e50-b2da-a3ccbbd34a85"
+								},
+								{
+									"key": "lab_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "1",
+									"description": "without type:1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/offers/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"offers",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/offers/show/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"offers",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Offer One",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1:package, 2:product",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "it's details",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "25000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef12372-2950-4ef0-89e9-8ed7ac47fab6"
+								},
+								{
+									"key": "lab_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "1",
+									"description": "without type:1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/offers/update/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"offers",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate-offer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "expires_in",
+									"value": "0 أيام، 0 ساعة، 1 دقيقة",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/offers/activate-offer/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"offers",
+								"activate-offer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/offers/delete/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"offers",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "",
+									"description": "1=>IN_REVIEW , 2=>ACCEPTED ,3=>REJECTED",
+									"type": "text"
+								},
+								{
+									"key": "delivered",
+									"value": "",
+									"description": "1 or 0 ",
+									"type": "text"
+								},
+								{
+									"key": "shufir_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "pharmacist_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contact_phone_number",
+									"value": "0935280318",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "pharmacist_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "location[0][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "location[0][area]",
+									"value": "222",
+									"type": "text"
+								},
+								{
+									"key": "location[0][street]",
+									"value": "2222",
+									"type": "text"
+								},
+								{
+									"key": "products[0][product_id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "products[0][quantity]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "products[0][net_price]",
+									"value": "100000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shufirs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/shufirs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"shufirs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/show/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shufir-selection",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shufir_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/shufir-selection/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"shufir-selection",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept-or-reject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "estimated_time_of_arrival",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "accept_or_reject",
+									"value": "1",
+									"description": "1 or 2 ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/accept-or-reject/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"accept-or-reject",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delivered",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "delivered",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/delivered/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"delivered",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contact_phone_number",
+									"value": "0922287317",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "pharmacist_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "location[0][city_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "location[0][area]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "location[0][street]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "products[0][product_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "products[0][quantity]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "products[0][net_price]",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://pharmaparadise.in/back-end/public/api",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3BoYXJtYXBhcmFkaXNlLmluL2JhY2stZW5kL3B1YmxpYy9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcxODM3NDgyMSwiZXhwIjoxNzE4Mzc4NDIxLCJuYmYiOjE3MTgzNzQ4MjEsImp0aSI6IkZMYjdzRWc2ZUpiY2pVOUEiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.q2JFs1LY7U_OK6CXyfkUbvJkjPFxiPFxs1kSlElrYrA",
+			"type": "string"
+		}
+	]
+}

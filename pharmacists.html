@@ -1,0 +1,824 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+
+	<!-- Meta data -->
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta
+		content="DayOne - It is one of the Major Dashboard Template which includes - HR, Employee and Job Dashboard. This template has multipurpose HTML template and also deals with Task, Project, Client and Support System Dashboard."
+		name="description">
+	<meta content="Spruko Technologies Private Limited" name="author">
+	<meta name="keywords"
+		content="admin dashboard, dashboard ui, backend, admin panel, admin template, dashboard template, admin, bootstrap, laravel, laravel admin panel, php admin panel, php admin dashboard, laravel admin template, laravel dashboard, laravel admin panel">
+
+	<!-- Title -->
+	<title>Dayone - Multipurpose Admin & Dashboard Template</title>
+
+	<!--Favicon -->
+	<link rel="icon" href="assets/images/brand/favicon.ico" type="image/x-icon">
+
+	<!-- Bootstrap css -->
+	<link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Style css -->
+	<link href="assets/css-rtl/style.css" rel="stylesheet">
+	<link href="assets/css-rtl/dark.css" rel="stylesheet">
+	<link href="assets/css-rtl/skin-modes.css" rel="stylesheet">
+	<link href="assets/css-rtl/table.css" rel="stylesheet">
+
+	<!-- Animate css -->
+	<link href="assets/plugins/animated/animated.css" rel="stylesheet">
+
+	<!--Sidemenu css -->
+	<link href="assets/css-rtl/sidemenu.css" rel="stylesheet">
+
+	<!-- P-scroll bar css-->
+	<link href="assets/plugins/p-scrollbar/p-scrollbar.css" rel="stylesheet">
+
+	<!---Icons css-->
+	<link href="assets/plugins/icons/icons.css" rel="stylesheet">
+
+	<!---Sidebar css-->
+	<link href="assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+	<!-- Select2 css -->
+	<link href="assets/plugins/select2/select2.min.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+
+
+	<!-- Notifications  Css -->
+	<link href="assets/plugins/notify/css/notifIt.css" rel="stylesheet">
+
+	<!-- INTERNAL Data table css -->
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap4.min-rtl.css" rel="stylesheet">
+	<link href="assets/plugins/datatable/responsive.bootstrap4.min.css" rel="stylesheet">
+
+	<!-- INTERNAl Summernote css -->
+	<link rel="stylesheet" href="assets/plugins/summernote/summernote-bs4.css">
+
+	<!-- INTERNAL Datepicker css-->
+	<link href="assets/plugins/modal-datepicker/datepicker.css" rel="stylesheet">
+
+
+	<!-- INTERNAL Switcher css -->
+	<link href="assets/switcher/css/switcher-rtl.css" rel="stylesheet">
+	<link href="assets/switcher/demo.css" rel="stylesheet">
+	<style>
+		* {
+			font-family: "Rubik", sans-serif;
+
+		}
+
+		.form-control {
+			font-family: "Rubik", sans-serif;
+			font-weight: 100;
+
+		}
+	</style>
+
+</head>
+
+<body class="app sidebar-mini" id="index1">
+
+
+	<!---Global-loader-->
+	<div id="global-loader">
+		<img src="assets/images/svgs/loader.svg" alt="loader">
+	</div>
+
+	<div class="page">
+		<div class="page-main">
+
+			<!--aside open-->
+			<aside class="app-sidebar" id="aside">
+				<div class="app-sidebar__logo">
+					<a class="header-brand" href="index7.html">
+						<img src="assets/images/brand/logo-white.png" class="header-brand-img dark-logo" alt="logo">
+						<img src="assets/images/brand/favicon.png" class="header-brand-img mobile-logo" alt="logo">
+					</a>
+				</div>
+				<div class="app-sidebar3">
+					<div class="app-sidebar__user">
+						<div class="dropdown user-pro-body text-center">
+							<div class="user-pic">
+								<img src="assets/images/users/16.jpg" alt="user-img"
+									class="avatar-xxl rounded-circle mb-1">
+							</div>
+							<div class="user-info">
+								<h5 class=" mb-2">Pharma Paradise</h5>
+								<span class="text-muted app-sidebar__user-name text-sm">Admin</span>
+							</div>
+						</div>
+					</div>
+					<ul class="side-menu">
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="index7.html">
+								<i class="feather feather-home sidemenu_icon"></i>
+								<span class="side-menu__label">الصفحة الرئيسية</span><i
+									class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#">
+								<i class="feather  feather-users sidemenu_icon"></i>
+								<span class="side-menu__label">الصيادلة</span><i class="angle fa fa-angle-left"></i>
+							</a>
+							<ul class="slide-menu">
+								<li><a href="accounts-list.html" class="slide-item">تأكيد الحسابات</a></li>
+								<li><a href="pharmacists.html" class="slide-item">الصيادلة المقبولين</a></li>
+								<li><a href="pharmacists-rejected.html" class="slide-item">الصيادلة المرفوضين</a></li>
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="order-track.html">
+								<i class="feather feather-clipboard sidemenu_icon"></i>
+								<span class="side-menu__label">الطلبات</span><i class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="products-list.html">
+								<i class="fa fa-tags sidemenu_icon"></i>
+								<span class="side-menu__label">المنتجات</span><i class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="factories-list .html">
+								<i class="fa fa-industry sidemenu_icon"></i>
+								<span class="side-menu__label">المعامل</span><i class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="offer list.html">
+								<i class="fa fa-gift sidemenu_icon"></i>
+								<span class="side-menu__label">العروض</span><i class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="invoice-list.html">
+								<i class="fe fe-file-text sidemenu_icon"></i>
+								<span class="side-menu__label">الفواتير</span><i class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="drivers.html">
+								<i class="fa fa-id-card-o  sidemenu_icon"></i>
+								<span class="side-menu__label">السائقين</span><i class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" href="">
+								<i class="fa fa-sign-out sidemenu_icon"></i>
+								<span class="side-menu__label">تسجيل الخروج</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<!--aside closed-->
+
+			<div class="app-content main-content">
+				<div class="side-app">
+
+					<!--app header-->
+					<div class="app-header header">
+						<div class="container-fluid">
+							<div class="d-flex">
+								<a class="header-brand" href="index.html">
+									<img src="assets/images/brand/logo.png" class="header-brand-img desktop-lgo"
+										alt="Dayonelogo">
+									<img src="assets/images/brand/logo-white.png" class="header-brand-img dark-logo"
+										alt="Dayonelogo">
+									<img src="assets/images/brand/favicon.png" class="header-brand-img mobile-logo"
+										alt="Dayonelogo">
+									<img src="assets/images/brand/favicon1.png" class="header-brand-img darkmobile-logo"
+										alt="Dayonelogo">
+								</a>
+								<div class="app-sidebar__toggle" data-toggle="sidebar">
+									<a class="open-toggle" href="#">
+										<i class="feather feather-menu"></i>
+									</a>
+									<a class="close-toggle" href="#">
+										<i class="feather feather-x"></i>
+									</a>
+								</div>
+								<div class="mt-0">
+									<form class="form-inline">
+										<div class="search-element">
+											<input type="search" class="form-control header-search"
+												placeholder="Search…" aria-label="Search" tabindex="1">
+											<button class="btn btn-primary-color">
+												<i class="feather feather-search"></i>
+											</button>
+										</div>
+									</form>
+								</div><!-- SEARCH -->
+								<div class="d-flex order-lg-2 my-auto mr-auto">
+									<a class="nav-link my-auto icon p-0 nav-link-lg d-xl-none navsearch" href="#"
+										data-toggle="search">
+										<i class="feather feather-search search-icon header-icon"></i>
+									</a>
+
+									<div class="dropdown header-fullscreen">
+										<a class="nav-link icon full-screen-link">
+											<i
+												class="feather feather-maximize fullscreen-button fullscreen header-icons"></i>
+											<i
+												class="feather feather-minimize fullscreen-button exit-fullscreen header-icons"></i>
+										</a>
+									</div>
+
+									<div class="dropdown header-notify">
+										<a class="nav-link icon" data-toggle="sidebar-left" data-target=".sidebar-left">
+											<i class="feather feather-bell header-icon"></i>
+											<span class="bg-dot"></span>
+										</a>
+									</div>
+									<div class="dropdown profile-dropdown">
+										<a href="#" class="nav-link pl-1 pr-0 leading-none" data-toggle="dropdown">
+											<span>
+												<img src="assets/images/users/16.jpg" alt="img"
+													class="avatar avatar-md bradius">
+											</span>
+										</a>
+										<div class="dropdown-menu dropdown-menu-left dropdown-menu-arrow animated">
+											<div class="p-3 text-center border-bottom">
+												<a href="#" class="text-center user pb-0 font-weight-bold">John
+													Thomson</a>
+												<p class="text-center user-semi-title">App Developer</p>
+											</div>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-user ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Profile</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-settings ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Settings</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-mail ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Messages</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#" data-toggle="modal"
+												data-target="#changepasswordnmodal">
+												<i class="feather feather-edit-2 ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Change Password</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-power ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Sign Out</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/app header-->
+
+
+					<!--Page header-->
+					<div class="page-header d-xl-flex d-block">
+						<div class="page-leftheader">
+							<h4 class="page-title" style="font-family: Rubik, sans-serif; font-size: 40px;  ">
+								الصيادلة</h4>
+						</div>
+
+					</div>
+					<!--End Page header-->
+
+					<!-- Row -->
+					<div class="row">
+
+						<div class="col-xl-3 col-lg-6 col-md-12">
+							<div class="card">
+								<!-- <a href=""> -->
+								<div class="card-body">
+									<div class="row">
+										<div class="col-7">
+											<div class="mt-0 text-right">
+												<span
+													style="font-family: Rubik, sans-serif; font-weight: 500; font-size: medium; ">الصيادلة
+													المقبولين</span>
+
+												<h3 class="mb-0 mt-1 text-success  fs-20" id="acClients"></h3>
+											</div>
+										</div>
+										<div class="col-5">
+											<div class="icon1 bg-success-transparent my-auto  float-left"> <i
+													class="fa fa-check"></i> </div>
+										</div>
+									</div>
+								</div>
+								<!-- </a> -->
+							</div>
+						</div>
+
+
+						<div class="col-xl-3 col-lg-6 col-md-12">
+							<div class="card">
+								<a href="task-list.html">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-7">
+												<div class="mt-10 text-right">
+													<span
+														style="font-family: Rubik, sans-serif; font-weight: 500; font-size:medium;">
+														قيد <br> المراجعة
+													</span>
+													<h3 class="mb-0 mt-1 text-warning fs-20" id="pendingClients"></h3>
+												</div>
+											</div>
+											<div class="col-5">
+												<div class="icon1 bg-warning-transparent my-auto  float-left"> <i
+														class="	fa fa-clock-o"></i> </div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-12">
+							<div class="card">
+								<a href="task-list.html">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-7">
+												<div class="mt-0 text-right">
+													<span
+														style="font-family: Rubik, sans-serif; font-weight: 500; font-size: medium;">الطلبات
+														المرفوضة</span>
+													<h3 class="mb-0 mt-1 text-danger fs-20" id="rejClients"></h3>
+												</div>
+											</div>
+											<div class="col-5">
+												<div class="icon1 bg-danger-transparent my-auto  float-left"> <i
+														class="feather feather-x"></i> </div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+
+					</div>
+					<!-- End Row-->
+
+					<!-- Row -->
+					<div class="row">
+						<div class="col-xl-12 col-md-12 col-lg-12">
+							<div class="card">
+								<div class="card-header  border-0">
+									<h4 class="card-title" style="font-family: Rubik, sans-serif; font-size: 22px; ">
+										الصيادلة المقبولين</h4>
+
+								</div>
+
+								<div class="card-body">
+									<div class="table-responsive">
+										<input type="text" id="searchInput" onkeyup="searchTable()"
+											placeholder="Search for names..">
+
+										<table id="myTable1"
+											class="table  table-vcenter text-nowrap table-bordered border-bottom">
+											<thead>
+												<tr>
+													<th onclick="sortTable(0)">ID</th>
+													<th onclick="sortTable(1)">الاسم</th>
+													<th onclick="sortTable(2)">البريد الالكتروني</th>
+													<th onclick="sortTable(3)">رقم الهاتف</th>
+													<th onclick="sortTable(5)">موقع الصيدلية</th>
+													<th onclick="sortTable(4)">صورة الشهادة</th>
+													<th onclick="sortTable(6)">الاجراءات</th>
+												</tr>
+											</thead>
+											<tbody>
+
+
+											</tbody>
+										</table>
+
+										<div id="pagination">
+											<button onclick="prevPage()">Previous</button>
+											<span id="pageInfo"></span>
+											<button onclick="nextPage()">Next</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row-->
+
+
+				</div>
+			</div><!-- end app-content-->
+		</div>
+
+
+		<!--Sidebar-right-->
+		<div class="sidebar sidebar-left sidebar-animate">
+			<div class="card-header border-bottom pb-5">
+				<h4 class="card-title">Notifications </h4>
+				<div class="card-options">
+					<a href="#" class="btn btn-sm btn-icon btn-light  text-primary" data-toggle="sidebar-left"
+						data-target=".sidebar-left"><i class="feather feather-x"></i> </a>
+				</div>
+			</div>
+			<div class="">
+				<div class="list-group-item  align-items-center border-0">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/4.jpg)"></span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Liam <span
+									class="text-muted font-weight-normal">Sent Message</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>30 mins
+								ago</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/10.jpg)"></span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Paul<span
+									class="text-muted font-weight-normal"> commented on you post</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1 hour
+								ago</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3 bg-pink-transparent"><span
+								class="feather feather-shopping-cart"></span></span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">James<span
+									class="text-muted font-weight-normal"> Order Placed</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1 day
+								ago</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/9.jpg)">
+							<span class="avatar-status bg-green"></span>
+						</span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Diane<span
+									class="text-muted font-weight-normal"> New Message Received</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1 day
+								ago</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/5.jpg)">
+							<span class="avatar-status bg-muted"></span>
+						</span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Vinny<span
+									class="text-muted font-weight-normal"> shared your post</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>2 days
+								ago</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3 bg-primary-transparent">M</span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Mack<span
+									class="text-muted font-weight-normal"> your admin lanuched</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1 week
+								ago</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/12.jpg)">
+							<span class="avatar-status bg-green"></span>
+						</span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Vinny<span
+									class="text-muted font-weight-normal"> shared your post</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>04 Jan
+								2021 1:56 Am</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/8.jpg)"> </span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Anna<span
+									class="text-muted font-weight-normal"> likes your post</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>25 Dec
+								2020 11:25 Am</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/14.jpg)"> </span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Kimberly<span
+									class="text-muted font-weight-normal"> Completed one task</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>24 Dec
+								2020 9:30 Pm</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3"
+							style="background-image: url(assets/images/users/3.jpg)"> </span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Rina<span
+									class="text-muted font-weight-normal"> your account has Updated</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>28 Nov
+								2020 7:16 Am</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item  align-items-center  border-bottom">
+					<div class="d-flex">
+						<span class="avatar avatar-lg brround ml-3 bg-success-transparent">J</span>
+						<div class="mt-1">
+							<a href="#" class="font-weight-semibold fs-16">Julia<span
+									class="text-muted font-weight-normal"> Prepare for Presentation</span></a>
+							<span class="clearfix"></span>
+							<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>18 Nov
+								2020 11:55 Am</span>
+						</div>
+						<div class="mr-auto">
+							<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="feather feather-more-horizontal"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left" role="menu">
+								<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+								<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+								<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+								<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/Sidebar-right-->
+
+
+		<!--Change password Modal -->
+		<div class="modal fade" id="changepasswordnmodal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Change Password</h5>
+						<button class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label class="form-label">New Password</label>
+							<input type="password" class="form-control" placeholder="password" value="">
+						</div>
+						<div class="form-group">
+							<label class="form-label">Confirm New Password</label>
+							<input type="password" class="form-control" placeholder="password" value="">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn btn-outline-primary" data-dismiss="modal">Close</a>
+						<a href="#" class="btn btn-primary">Confirm</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Change password Modal  -->
+
+
+	</div>
+
+	<!-- Back to top -->
+	<a href="#top" id="back-to-top"><span class="feather feather-chevrons-up"></span></a>
+
+	<!--Moment js-->
+	<script src="assets/plugins/moment/moment.js"></script>
+
+	<!-- Jquery js-->
+	<script src="assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap4 js-->
+	<script src="assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!--Othercharts js-->
+	<script src="assets/plugins/othercharts/jquery.sparkline.min.js"></script>
+
+	<!-- Circle-progress js-->
+	<script src="assets/plugins/circle-progress/circle-progress.min.js"></script>
+
+	<!--Sidemenu js-->
+	<script src="assets/plugins/sidemenu/sidemenu.js"></script>
+
+	<!-- P-scroll js-->
+	<script src="assets/plugins/p-scrollbar/p-scrollbar.js"></script>
+	<script src="assets/plugins/p-scrollbar/p-scroll1.js"></script>
+
+	<!--Sidebar js-->
+	<script src="assets/plugins/sidebar/sidebar-rtl.js"></script>
+
+	<!-- Select2 js -->
+	<script src="assets/plugins/select2/select2.full.min.js"></script>
+
+
+	<!-- Notifications js -->
+	<script src="assets/plugins/notify/js/notifIt.js"></script>
+
+	<!--INTERNAL Chart js -->
+	<script src="assets/plugins/chart/chart.bundle.js"></script>
+	<script src="assets/plugins/chart/utils.js"></script>
+
+	<!-- INTERNAL Datepicker js -->
+	<script src="assets/plugins/modal-datepicker/datepicker.js"></script>
+
+	<!-- INTERNAL Data tables -->
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.bootstrap4.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
+	<script src="assets/plugins/datatable/js/buttons.bootstrap4.min.js"></script>
+	<script src="assets/plugins/datatable/dataTables.responsive.min.js"></script>
+	<script src="assets/plugins/datatable/responsive.bootstrap4.min.js"></script>
+
+	<!-- INTERNAL Summernote js  -->
+	<script src="assets/plugins/summernote/summernote-bs4.js"></script>
+
+	<!-- INTERNAL Index js-->
+	<script src="assets/js/task/task-list.js"></script>
+
+
+	<!-- Custom js-->
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/all.js"></script>
+	<script src="assets/js/mytable.js"></script>
+	<script>
+		function showImage(imageUrl) {
+			// Open the image URL in a new tab
+			window.open(imageUrl, '_blank');
+		}
+	</script>
+
+	<!-- Switcher js -->
+	<script src="assets/switcher/js/switcher-rtl.js"></script>
+
+</body>
+
+</html>

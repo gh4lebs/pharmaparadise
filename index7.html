@@ -1,0 +1,1094 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Merienda&family=Nunito:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+
+	<!-- Meta data -->
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta
+		content="DayOne - It is one of the Major Dashboard Template which includes - HR, Employee and Job Dashboard. This template has multipurpose HTML template and also deals with Task, Project, Client and Support System Dashboard."
+		name="description">
+	<meta content="Spruko Technologies Private Limited" name="author">
+	<meta name="keywords"
+		content="admin dashboard, dashboard ui, backend, admin panel, admin template, dashboard template, admin, bootstrap, laravel, laravel admin panel, php admin panel, php admin dashboard, laravel admin template, laravel dashboard, laravel admin panel">
+
+	<!-- Title -->
+	<title>Pharma Paradise Admin Panel</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!-- Include Moment.js -->
+	<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+	<!-- Include Chart.js Moment.js Adapter -->
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0/dist/chartjs-adapter-moment.min.js"></script>
+
+	<!--Favicon -->
+	<link rel="icon" href="assets/images/brand/favicon.ico" type="image/x-icon">
+
+	<!-- Bootstrap css -->
+	<link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Style css -->
+	<link href="assets/css-rtl/style.css" rel="stylesheet">
+	<link href="assets/css-rtl/skin-modes.css" rel="stylesheet">
+
+	<!-- Animate css -->
+	<link href="assets/plugins/animated/animated.css" rel="stylesheet">
+
+	<!--Sidemenu css -->
+	<link href="assets/css-rtl/sidemenu.css" rel="stylesheet">
+
+	<!-- P-scroll bar css-->
+	<link href="assets/plugins/p-scrollbar/p-scrollbar.css" rel="stylesheet">
+
+	<!---Icons css-->
+	<link href="assets/plugins/icons/icons.css" rel="stylesheet">
+
+	<!---Sidebar css-->
+	<link href="assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+	<!-- Select2 css -->
+	<link href="assets/plugins/select2/select2.min.css" rel="stylesheet">
+
+
+	<!-- INTERNAL Data table css -->
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap4.min-rtl.css" rel="stylesheet">
+
+
+
+
+	<style>
+		*,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Rubik", sans-serif;
+			;
+		}
+
+		#cityCheckbox {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.checkbox-wrapper {
+			margin-right: 15px;
+			/* Adjust the margin as needed */
+			display: flex;
+			align-items: center;
+		}
+
+		.checkbox-label {
+			margin-bottom: 1px;
+			margin-right: 5px;
+
+		}
+	</style>
+</head>
+
+<body class="app sidebar-mini" id="index1">
+
+
+
+	<!---Global-loader-->
+	<div id="global-loader">
+		<img src="assets/images/svgs/loader.svg" alt="loader">
+	</div>
+
+	<div class="page">
+		<div class="page-main">
+
+			<!--aside open-->
+			<aside class="app-sidebar">
+				<div class="app-sidebar__logo">
+					<a class="header-brand" href="index.html">
+
+						<img src="assets/images/brand/logo-white.png" class="header-brand-img dark-logo" alt="logo">
+						<img src="assets/images/brand/favicon.png" class="header-brand-img mobile-logo" alt="logo">
+
+					</a>
+				</div>
+				<div class="app-sidebar3">
+					<div class="app-sidebar__user">
+						<div class="dropdown user-pro-body text-center">
+							<div class="user-pic">
+								<img src="assets/images/users/16.jpg" alt="user-img"
+									class="avatar-xxl rounded-circle mb-1">
+							</div>
+							<div class="user-info">
+								<h5 class=" mb-2">Pharma Paradise</h5>
+								<span class="text-muted app-sidebar__user-name text-sm">Admin</span>
+							</div>
+						</div>
+					</div>
+					<ul class="side-menu">
+
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="index7.html">
+								<i class="feather feather-home sidemenu_icon"></i>
+								<span class="side-menu__label">الصفحة الرئيسية</span><i
+									class="angle fa fa-angle-left"></i>
+							</a>
+
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#">
+								<i class="feather  feather-users sidemenu_icon"></i>
+								<span class="side-menu__label">الصيادلة</span><i class="angle fa fa-angle-left"></i>
+							</a>
+							<ul class="slide-menu">
+								<li><a href="accounts-list.html" class="slide-item">تأكيد الحسابات</a></li>
+								<li><a href="pharmacists.html" class="slide-item">الصيادلة المقبولين</a></li>
+								<li><a href="pharmacists-rejected.html" class="slide-item">الصيادلة المرفوضين</a></li>
+
+							</ul>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="order-track.html">
+								<i class="feather feather-clipboard sidemenu_icon"></i>
+								<span class="side-menu__label">الطلبات</span><i class="angle fa fa-angle-left"></i>
+							</a>
+
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="products-list.html">
+								<i class="feather feather-book sidemenu_icon"></i>
+								<span class="side-menu__label">المنتجات</span><i class="angle fa fa-angle-left"></i>
+							</a>
+
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="factories-list .html">
+								<i class="feather feather-user sidemenu_icon"></i>
+								<span class="side-menu__label">المعامل</span><i class="angle fa fa-angle-left"></i>
+							</a>
+
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="offer list.html">
+								<i class="feather feather-briefcase sidemenu_icon"></i>
+								<span class="side-menu__label">العروض</span><i class="angle fa fa-angle-left"></i>
+							</a>
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="invoice-list.html">
+								<i class="feather feather-headphones sidemenu_icon"></i>
+								<span class="side-menu__label">الفواتير</span><i class="angle fa fa-angle-left"></i>
+							</a>
+
+						</li>
+
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="" href="drivers.html">
+								<i class="feather feather-airplay sidemenu_icon"></i>
+								<span class="side-menu__label">السائقين</span><i class="angle fa fa-angle-left"></i>
+							</a>
+
+						</li>
+						<li class="slide">
+							<a class="side-menu__item" id="logout">
+								<i class="feather feather-message-square sidemenu_icon"></i>
+								<span class="side-menu__label">تسجيل الخروج</span>
+							</a>
+						</li>
+
+
+					</ul>
+
+				</div>
+			</aside>
+
+			<!--aside closed-->
+			<div class="app-content main-content">
+				<div class="side-app">
+
+					<!--app header-->
+					<div class="app-header header">
+						<div class="container-fluid">
+							<div class="d-flex">
+								<a class="header-brand" href="index.html">
+									<img src="assets/images/brand/logo-white.png" class="header-brand-img dark-logo"
+										alt="Dayonelogo">
+									<img src="assets/images/brand/favicon.png" class="header-brand-img mobile-logo"
+										alt="Dayonelogo">
+
+								</a>
+								<div class="app-sidebar__toggle" data-toggle="sidebar">
+									<a class="open-toggle" href="#">
+										<i class="feather feather-menu"></i>
+									</a>
+									<a class="close-toggle" href="#">
+										<i class="feather feather-x"></i>
+									</a>
+								</div>
+								<div class="mt-0">
+									<form class="form-inline">
+										<div class="search-element">
+											<input type="search" class="form-control header-search"
+												placeholder="Search…" aria-label="Search" tabindex="1">
+											<button class="btn btn-primary-color">
+												<i class="feather feather-search"></i>
+											</button>
+										</div>
+									</form>
+								</div><!-- SEARCH -->
+								<div class="d-flex order-lg-2 my-auto mr-auto">
+									<a class="nav-link my-auto icon p-0 nav-link-lg d-xl-none navsearch" href="#"
+										data-toggle="search">
+										<i class="feather feather-search search-icon header-icon"></i>
+									</a>
+
+									<div class="dropdown header-fullscreen">
+										<a class="nav-link icon full-screen-link">
+											<i
+												class="feather feather-maximize fullscreen-button fullscreen header-icons"></i>
+											<i
+												class="feather feather-minimize fullscreen-button exit-fullscreen header-icons"></i>
+										</a>
+									</div>
+
+									<div class="dropdown header-notify">
+										<a class="nav-link icon" data-toggle="sidebar-left" data-target=".sidebar-left">
+											<i class="feather feather-bell header-icon"></i>
+											<span class="bg-dot"></span>
+										</a>
+									</div>
+									<div class="dropdown profile-dropdown">
+										<a href="#" class="nav-link pl-1 pr-0 leading-none" data-toggle="dropdown">
+											<span>
+												<img src="assets/images/users/16.jpg" alt="img"
+													class="avatar avatar-md bradius">
+											</span>
+										</a>
+										<div class="dropdown-menu dropdown-menu-left dropdown-menu-arrow animated">
+											<div class="p-3 text-center border-bottom">
+												<a href="#" class="text-center user pb-0 font-weight-bold">John
+													Thomson</a>
+												<p class="text-center user-semi-title">App Developer</p>
+											</div>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-user ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Profile</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-settings ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Settings</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-mail ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Messages</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#" data-toggle="modal"
+												data-target="#changepasswordnmodal">
+												<i class="feather feather-edit-2 ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Change Password</div>
+											</a>
+											<a class="dropdown-item d-flex" href="#">
+												<i class="feather feather-power ml-3 fs-16 my-auto"></i>
+												<div class="mt-1">Sign Out</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/app header-->
+
+
+					<!--Page header-->
+					<div class="page-header d-xl-flex d-block">
+						<div class="page-leftheader">
+							<h4 class="page-title">Pharma Paradise Admin<span
+									class="font-weight-normal text-muted ml-2">Dashboard</span></h4>
+						</div>
+
+					</div>
+					<!--End Page header-->
+
+					<!--Row-->
+					<div class="row">
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-8">
+											<div class="mt-0 text-right"> <span class="font-weight-semibold">كل
+													الطلبات</span>
+												<h3 class="mb-0 mt-1 text-success mb-2" id="total_orders"></h3>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="icon1 bg-success my-auto  float-left"> <i
+													class="	fa fa-shopping-cart"></i> </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-8">
+											<div class="mt-0 text-right"> <span class="font-weight-semibold">إجمالي
+													العملاء</span>
+												<h3 class="mb-0 mt-1 text-secondary mb-2" id="totalclients"></h3>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="icon1 bg-secondary my-auto  float-left"> <i
+													class="	fa fa-male"></i> </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-8">
+											<div class="mt-0 text-right"> <span class="font-weight-semibold">إجمالي
+													المنتجات </span>
+												<h3 class="mb-0 mt-1 text-primary mb-2" id="TotalProducts"></h3>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="icon1 bg-primary my-auto  float-left"> <i
+													class="fa fa-check-square-o"></i> </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-8">
+											<div class="mt-0 text-right"> <span class="font-weight-semibold">عدد الشركات
+													الطبية</span>
+												<h3 class="mb-0 mt-1 text-danger mb-2" id="factoryCount"></h3>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="icon1 bg-danger my-auto  float-left"> <i
+													class="	fa fa-building"></i> </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row-->
+
+					<!--Row-->
+					<div class="row">
+						<div class="col-xl-8 col-md-8 col-lg-8">
+							<div class="card">
+								<div class="card-header border-0 responsive-header">
+									<h4 class="card-title">الطلبات الشهرية</h4>
+
+								</div>
+								<div class="card-body">
+									<div>
+										<label for="startDate">Start Date:</label>
+										<input type="date" id="startDate">
+										<label for="endDate">End Date:</label>
+										<input type="date" id="endDate">
+										<label for="interval">Select Interval:</label>
+										<select id="interval">
+											<option value="day">Days</option>
+											<option value="week">Weeks</option>
+											<option value="month">Months</option>
+										</select>
+										<button id="updateButton" class="btn btn-primary">Update Chart</button>
+									</div>
+									<canvas id="myChart" width="400" height="200"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-4 col-lg-4">
+							<div class="card">
+								<div class="card-header border-0 pr-6">
+									<h4 class="card-title">أوقات التوزيع</h4>
+									<div class="card-options">
+										<div class="btn-list">
+											<a class="remind-icon text-dark ml-2" href="#" data-toggle="modal"
+												data-target="#choosemodal" title="حدد يوم للمدينة">
+												<i class="fa fa-calendar-plus-o"></i>
+											</a>
+											<a class="remind-icon text-dark ml-2" href="#" data-toggle="modal"
+												data-target="#remindermodal" title="إضافة مدينة جديدة">
+												<i class="feather feather-plus"></i>
+											</a>
+
+										</div>
+									</div>
+								</div>
+								<div class="card-body pt-4" style="max-height: 400px; overflow-y: auto;">
+									<div id="weekCalendar" class="week-calendar">
+										<!-- Calendar days will be dynamically added here -->
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- End Row-->
+
+
+
+
+					</div>
+					<!-- Row-->
+					<div class="row">
+						<div class="col-xl-4 col-md-4 col-lg-4">
+							<div class="card">
+								<div class="card-header border-bottom-0">
+									<h4 class="card-title">منتجات تمت إضافتها مؤخرا</h4>
+								</div>
+								<div class="card-body l5p">
+
+
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-8">
+							<div class="card overflow-hidden">
+								<div class="card-header border-0">
+									<h4 class="card-title">الطلبات الأخيرة</h4>
+								</div>
+								<div class="card-body p-0 pt-4">
+									<div class="table-responsive">
+										<table class="table table-vcenter text-nowrap border-top mb-0 invoice-table"
+											id="l5o">
+											<thead>
+												<tr>
+													<th class="wd-10p border-bottom-0">رقم الطلبية</th>
+													<th class="wd-15p border-bottom-0">الصيدلاني</th>
+													<th class="wd-15p border-bottom-0">المبلغ</th>
+													<th class="wd-15p border-bottom-0">عرض التفاصيل</th>
+												</tr>
+											</thead>
+											<tbody>
+
+
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row-->
+				</div><!-- end app-content-->
+			</div>
+
+
+
+			<!--Sidebar-right-->
+			<div class="sidebar sidebar-left sidebar-animate">
+				<div class="card-header border-bottom pb-5">
+					<h4 class="card-title">Notifications </h4>
+					<div class="card-options">
+						<a href="#" class="btn btn-sm btn-icon btn-light  text-primary" data-toggle="sidebar-left"
+							data-target=".sidebar-left"><i class="feather feather-x"></i> </a>
+					</div>
+				</div>
+				<div class="">
+					<div class="list-group-item  align-items-center border-0">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/4.jpg)"></span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Liam <span
+										class="text-muted font-weight-normal">Sent Message</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>30
+									mins
+									ago</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/10.jpg)"></span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Paul<span
+										class="text-muted font-weight-normal"> commented on you post</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1
+									hour
+									ago</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3 bg-pink-transparent"><span
+									class="feather feather-shopping-cart"></span></span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">James<span
+										class="text-muted font-weight-normal"> Order Placed</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1
+									day
+									ago</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/9.jpg)">
+								<span class="avatar-status bg-green"></span>
+							</span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Diane<span
+										class="text-muted font-weight-normal"> New Message Received</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1
+									day
+									ago</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/5.jpg)">
+								<span class="avatar-status bg-muted"></span>
+							</span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Vinny<span
+										class="text-muted font-weight-normal"> shared your post</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>2
+									days
+									ago</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3 bg-primary-transparent">M</span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Mack<span
+										class="text-muted font-weight-normal"> your admin lanuched</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>1
+									week
+									ago</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/12.jpg)">
+								<span class="avatar-status bg-green"></span>
+							</span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Vinny<span
+										class="text-muted font-weight-normal"> shared your post</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>04
+									Jan
+									2021 1:56 Am</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/8.jpg)"> </span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Anna<span
+										class="text-muted font-weight-normal"> likes your post</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>25
+									Dec
+									2020 11:25 Am</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/14.jpg)"> </span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Kimberly<span
+										class="text-muted font-weight-normal"> Completed one task</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>24
+									Dec
+									2020 9:30 Pm</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3"
+								style="background-image: url(assets/images/users/3.jpg)"> </span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Rina<span
+										class="text-muted font-weight-normal"> your account has Updated</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>28
+									Nov
+									2020 7:16 Am</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="list-group-item  align-items-center  border-bottom">
+						<div class="d-flex">
+							<span class="avatar avatar-lg brround ml-3 bg-success-transparent">J</span>
+							<div class="mt-1">
+								<a href="#" class="font-weight-semibold fs-16">Julia<span
+										class="text-muted font-weight-normal"> Prepare for Presentation</span></a>
+								<span class="clearfix"></span>
+								<span class="text-muted fs-13 mr-auto"><i class="mdi mdi-clock text-muted ml-1"></i>18
+									Nov
+									2020 11:55 Am</span>
+							</div>
+							<div class="mr-auto">
+								<a href="" class="mr-0 option-dots" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">
+									<span class="feather feather-more-horizontal"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-left" role="menu">
+									<li><a href="#"><i class="feather feather-eye ml-2"></i>View</a></li>
+									<li><a href="#"><i class="feather feather-plus-circle ml-2"></i>Add</a></li>
+									<li><a href="#"><i class="feather feather-trash-2 ml-2"></i>Remove</a></li>
+									<li><a href="#"><i class="feather feather-settings ml-2"></i>More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/Sidebar-right-->
+
+
+			<!--Change password Modal -->
+			<div class="modal fade" id="changepasswordnmodal">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Change Password</h5>
+							<button class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label class="form-label">New Password</label>
+								<input type="password" class="form-control" placeholder="password" value="">
+							</div>
+							<div class="form-group">
+								<label class="form-label">Confirm New Password</label>
+								<input type="password" class="form-control" placeholder="password" value="">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a href="#" class="btn btn-outline-primary" data-dismiss="modal">Close</a>
+							<a href="#" class="btn btn-primary">Confirm</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Change password Modal  -->
+			<!-- Modal -->
+			<div class="modal fade" id="remindermodal">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">ادخل منطقة جديدة</h5>
+							<button class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<form method="POST" id="cityForm">
+							<div class="modal-body">
+								<div class="form-group">
+									<label class="form-label">المنطقة</label>
+									<input type="text" class="form-control" placeholder="المنطقة" name="name">
+								</div>
+
+
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+								<button class="btn btn-primary" type="submit">Save</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+			<!-- Modal -->
+			<div class="modal fade" id="choosemodal">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">حدد يوم للمنطقة</h5>
+							<button class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<form method="POST" id="chooseForm">
+							<div class="modal-body">
+								<div class="form-group">
+									<label class="form-label">المنطقة</label>
+									<select name="day_id" class="form-control custom-select select2"
+										data-placeholder="حدد اليوم" id="days" onchange="populateCheckboxes()">
+										<option value="">اختر اليوم</option>
+									</select>
+								</div>
+								<label class="form-label">المنطقة</label>
+								<div class="form-group" id="cityCheckbox">
+								</div>
+
+
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+								<button class="btn btn-primary" type="submit">Save</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+
+
+		</div>
+
+		<!-- Back to top -->
+		<a href="#top" id="back-to-top"><span class="feather feather-chevrons-up"></span></a>
+
+		<!--Moment js-->
+		<script src="assets/plugins/moment/moment.js"></script>
+
+		<!-- Jquery js-->
+		<script src="assets/plugins/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap4 js-->
+		<script src="assets/plugins/bootstrap/popper.min.js"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/sidemenu/sidemenu.js"></script>
+
+		<!-- P-scroll js-->
+		<script src="assets/plugins/p-scrollbar/p-scrollbar.js"></script>
+		<script src="assets/plugins/p-scrollbar/p-scroll1.js"></script>
+
+		<!--Sidebar js-->
+		<script src="assets/plugins/sidebar/sidebar-rtl.js"></script>
+
+		<!-- Select2 js -->
+		<script src="assets/plugins/select2/select2.full.min.js"></script>
+
+
+		<!-- INTERNAL Peitychart js-->
+		<script src="assets/plugins/peitychart/jquery.peity.min.js"></script>
+		<script src="assets/plugins/peitychart/peitychart.init.js"></script>
+
+		<!-- INTERNAL  Datepicker js -->
+		<script src="assets/plugins/date-picker/jquery-ui.js"></script>
+
+		<!-- INTERNAL Chart js -->
+		<script src="assets/plugins/chart/chart.bundle.js"></script>
+		<script src="assets/plugins/chart/utils.js"></script>
+
+		<!-- INTERNAL Chartjs rounded-barchart -->
+		<script src="assets/plugins/chart.min/chart.min.js"></script>
+		<script src="assets/plugins/chart.min/rounded-barchart.js"></script>
+
+		<!-- INTERNAL Data tables -->
+		<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+		<script src="assets/plugins/datatable/js/dataTables.bootstrap4.js"></script>
+		<script src="assets/plugins/datatable/dataTables.responsive.min.js"></script>
+		<script src="assets/plugins/datatable/responsive.bootstrap4.min.js"></script>
+
+		<!-- Firebase App (the core Firebase SDK) -->
+		<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"></script>
+		<!-- Firebase Cloud Messaging -->
+		<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-messaging.js"></script>
+
+		<!-- INTERNAL Index js-->
+		<script src="assets/js/index7.js"></script>
+
+
+		<!-- Custom js-->
+		<script src="assets/js/custom.js"></script>
+		<script src="assets/js/all.js"></script>
+		<script src="assets/js/bar.js"></script>
+		<script>
+			async function populateCheckboxes() {
+				const selectedDayId = document.getElementById('days').value; // Trim any extra spaces
+
+				try {
+					const accessToken = localStorage.getItem('accessToken');
+					const response = await fetch('https://pharmaparadise.in/back-end/public/api/distribution-schedule/index', {
+						method: 'GET',
+						headers: {
+							'Authorization': `Bearer ${accessToken}`,
+							'Content-Type': 'application/json'
+						}
+					});
+
+					if (!response.ok) {
+						const errorData = await response.json();
+						console.error('Error:', errorData);
+						alert('Error: Failed to fetch data.');
+						return;
+					}
+
+					const responseData = await response.json();
+					console.log('Response Data:', responseData);
+					const selectedDayData = responseData.data.find(day => day.id === parseInt(selectedDayId));
+					console.log('Selected Day Data:', selectedDayData);
+
+					if (selectedDayData) {
+						// Uncheck all checkboxes
+						const checkboxes = document.querySelectorAll('#cityCheckbox input[type="checkbox"]');
+						checkboxes.forEach(checkbox => checkbox.checked = false);
+						console.log(selectedDayData.cities)
+						// Check the checkboxes based on the selected day data
+						selectedDayData.cities.forEach(city => {
+							const cityId = city.id; // Assuming city has an id property
+
+							console.log(`Processing cityId: ${cityId}`); // Log the cityId being processed
+
+							const checkbox = document.querySelector(`#cityCheckbox input[type="checkbox"][value="${cityId}"]`);
+							if (checkbox) {
+								checkbox.checked = true;
+								console.log(`Checkbox with value ${cityId} checked`); // Log when checkbox is checked
+							} else {
+								console.log(`Checkbox with value ${cityId} not found`); // Log if checkbox is not found
+							}
+						});
+					} else {
+						console.log(`No data found for day_id ${selectedDayId}`);
+					}
+
+				} catch (error) {
+					console.error('Error:', error);
+					alert('Error: Something went wrong.');
+				}
+			};
+
+			async function populateWeekCalendar() {
+				const weekCalendar = document.getElementById('weekCalendar');
+
+				// Retrieve access token from localStorage or sessionStorage
+				const accessToken = localStorage.getItem('accessToken'); // Change 'localStorage' to 'sessionStorage' if needed
+
+				try {
+					const accessToken = localStorage.getItem('accessToken');
+					const response = await fetch('https://pharmaparadise.in/back-end/public/api/distribution-schedule/index', {
+						method: 'GET',
+						headers: {
+							'Authorization': `Bearer ${accessToken}`,
+							'Content-Type': 'application/json'
+						}
+					});
+
+					if (!response.ok) {
+						const errorData = await response.json();
+						console.error('Error:', errorData);
+						alert('Error: Failed to fetch data.');
+						return;
+					}
+
+					const responseData = await response.json();
+					console.log('Response Data:', responseData);
+
+					// Clear any existing content
+					weekCalendar.innerHTML = '';
+
+					// Iterate over each day in the response data
+					responseData.data.forEach(day => {
+						const dayElement = document.createElement('div');
+						dayElement.classList.add('card', 'mb-3', 'bg-light'); // Apply light gray background
+
+						const cardBody = document.createElement('div');
+						cardBody.classList.add('card-body');
+
+						const dayHeader = document.createElement('h5');
+						dayHeader.classList.add('card-title', 'text-primary'); // Blue text color for day header
+						dayHeader.textContent = day.name;
+						cardBody.appendChild(dayHeader);
+
+						// Display city names associated with this day
+						const citiesList = document.createElement('ul');
+						citiesList.classList.add('list-group', 'list-group-flush');
+
+						day.cities.forEach(city => {
+							const cityItem = document.createElement('li');
+							cityItem.classList.add('list-group-item');
+							cityItem.textContent = city.name;
+							citiesList.appendChild(cityItem);
+						});
+
+						cardBody.appendChild(citiesList);
+						dayElement.appendChild(cardBody);
+
+						// Append the day element to the week calendar
+						weekCalendar.appendChild(dayElement);
+					});
+
+				} catch (error) {
+					console.error('Error:', error);
+					alert('Error: Something went wrong.');
+				}
+			}
+
+			// Call the function to populate the calendar when the page loads or as needed
+			populateWeekCalendar();
+
+
+		</script>
+
+
+		<!-- Switcher js -->
+		<script src="assets/switcher/js/switcher-rtl.js"></script>
+
+
+
+</body>
+
+</html>
